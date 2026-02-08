@@ -9,7 +9,6 @@ requires-python = ">=3.12"
 license = { text = "GNU AGPLv3" }
 readme = "README.md"
 dependencies = [
-    "mistletoe>=1.5.1",
     "pydantic>=2.12.5",
     "pytest>=9.0.2",
     "requests>=2.32.5",

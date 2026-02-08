@@ -8,6 +8,7 @@ __pycache__/
 my_qr.png
 .env
 *.sublime-workspace
+*.sublime-project
 *.swap
 build/
 dist/
