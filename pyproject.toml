@@ -9,6 +9,9 @@ requires-python = ">=3.12"
 license = { text = "GNU AGPLv3" }
 readme = "README.md"
 dependencies = [
+    "mistletoe>=1.5.1",
+    "pydantic>=2.12.5",
+    "pytest>=9.0.2",
     "requests>=2.32.5",
     "ruff",
 ]
@@ -99,6 +102,13 @@ ignore = [
 max-doc-length = 120
 
 [tool.setuptools.packages.find]
-where = ["."]
-include = ["src*"] # Укажи только папку с кодом
-exclude = ["data*", "images*", "tests*"]
+where = ["src"]         # Это заставляет Python смотреть ВНУТРЬ папки src
+include = ["megaexnotes*"] # Включаем только наш основной пакет
+exclude = ["data*", "images*", "tests*"]    # Исключаем тесты из сборки самого пакета
+
+[dependency-groups]
+dev = [
+    "sphinx>=9.1.0",
+    "sphinx-rtd-theme>=3.1.0",
+    "pytest>=8.0.0",
+]
